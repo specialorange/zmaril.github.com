@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://zmaril.github.com/atom.xml" rel="self"/>
   <link href="http://zmaril.github.com/"/>
-  <updated>2012-12-28T02:40:36-05:00</updated>
+  <updated>2012-12-28T02:44:52-05:00</updated>
   <id>http://zmaril.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,592 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why I don't have a Facebook account]]></title>
+    <link href="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/"/>
+    <updated>2012-12-27T00:00:00-05:00</updated>
+    <id>http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook</id>
+    <content type="html"><![CDATA[<p>In the past past three years, I&#8217;ve lived in Chicago (IL), College
+Station (TX), Urbana (IL), Cincinnati (OH), and Mountain View (CA).
+I&#8217;ve spent at least three months in each place and gotten to know and
+love a good number of people from all over. I have friends who travel
+internationally, and friends from school who are now scattered all
+over the world. All of this movement and change brings up the topic of
+keeping in touch fairly often. The main method for keeping in touch
+now seems to be adding each other on Facebook and letting
+conversations happen &#8220;naturally&#8221;. This poses an awkward problem for me
+in that that <strong>I don&#8217;t have a Facebook account</strong> and <strong>I don&#8217;t want to
+create one</strong>.</p>
+
+<p>I got rid of my old Facebook account at the end of high school because
+it had become a boring waste of time and I didn&#8217;t have any good reason
+to keep it around much longer. This would probably still be the case
+now, but my reasons for not having an account have evolved and gotten
+much stronger as I&#8217;ve learned more about
+<a href="http://en.wikipedia.org/wiki/Natural_language_processing">natural language processing</a>, <a href="http://en.wikipedia.org/wiki/Computer_vision">computer vision</a>,
+<a href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>, and how some <a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=1&amp;_r=2&amp;hp&amp;">companies</a> make
+<a href="http://www.economist.com/node/21556263">money</a>.</p>
+
+<p>I&#8217;ll premise this all with the one really strong assumption I&#8217;ve made:
+<strong>I don&#8217;t think Facebook can make enough money from advertising to
+satisfy shareholders or even hit internal monetization targets</strong>. While
+there is <a href="ipo">very little that shareholders can do to influence</a>
+Facebook&#8217;s decisions, everything could change very quickly in the near
+future:</p>
+
+<ul>
+<li>Facebook hits a rough patch and has to sell more preferred stock to
+finance operations.</li>
+<li>Zuckerburg needs vast quantities of cash to buy Brazil as his summer get away.</li>
+<li>Facebook uses &#8220;pressure&#8221; from shareholders as a valid reason to do
+whatever it wants.</li>
+<li>Zuckerburg dies/retires suddenly and somebody with a different vision for
+Facebook becomes CEO.</li>
+</ul>
+
+
+<p>In my mind, there is a nonzero chance of Facebook needing to find a
+way to make way more money than advertising will allow them to in the
+next few years. And so, with that assumption, let&#8217;s put our
+entrepreneur hats on and think: <strong>What can Facebook do to make money
+besides ads?</strong> This exercise by itself is a fun challenge in trying to
+figure out what resources Facebook has at its disposal. Maybe try
+taking a few minutes and see what you can think up.</p>
+
+<p>The most realistic option that I see happening is that Facebook takes
+all that talent they&#8217;ve gathered from Stanford and other nerd farms to
+mine all the data that they&#8217;ve accumulated. <strong>For the typical user,
+they probably have a few years worth of status updates, wall posts,
+messages, facebook relationships between members, events attended,
+likes, location data based off of geo-tagged status updates and
+reverse IP addresses, history of web sites visited
+(<a href="http://www.businessinsider.com/this-is-how-facebook-is-tracking-your-internet-activity-2012-9?op=1">collected from like counters on pages</a>)
+and countless tagged photos</strong>. There is probably more that they know,
+but all this should be enough to get us started down the path of
+understanding why Facebook knows more about you than you ever will.</p>
+
+<p>You there! Yes, you! Step right up and play <strong>&#8220;What could Facebook
+possibly know about a user?&#8221;</strong></p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook has figured out how to measure and monitor womens&#8217; Menstrual cycle based solely on their status updates.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284115670814314496" data-datetime="2012-12-27T01:57:09+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>If you are a woman, then you probably know the pains of the menstrual
+cycle. I don&#8217;t have firsthand experience personally but I&#8217;ve heard
+through the grapevine that it sucks. <strong>Have you ever seen a woman post a
+status update like &#8220;Omg, I hate my body, does anybody have any
+chocolate&#8221;?</strong> It is reasonable to assume that the user was on their
+period when that update was made.</p>
+
+<p>Here&#8217;s how Facebook could use status updates like this one and other
+ones to calculate when a woman was on her menstrual cycle.
+Specifically, what they would be looking for would be the length and
+offset of the cycle (when does the cycle start and how long does it
+last?). They could construct a
+<a href="http://en.wikipedia.org/wiki/Bag-of-words_model">bag of words</a> model
+based on the set of words like
+&#8220;period&#8221;,&#8221;blood&#8221;,&#8221;midol&#8221;,&#8221;tampon&#8221;,&#8221;hurts&#8221;, etc. They could then create
+a function that takes in a status update and uses the presence of the
+words in the bag to give the most probably stage of her menstrual
+cycle that a woman was on when she made that status update. Then, they
+could run that function across every status update that a woman has
+made and get back a time series giving the stages of a woman&#8217;s cycle.
+From there, a
+<a href="http://en.wikipedia.org/wiki/Autocorrelation">measure of autocorrelation</a>
+could be applied to find out the length of the cycle. The offset could
+then be found shortly afterwards through some straightforward methods.</p>
+
+<p>This is a simple model of course and only works if a woman posts
+somewhat directly about her period. But bag of words can be extremely
+versatile; the model could be refined to figure out what words like
+&#8220;chocolate&#8221;, &#8220;stay home&#8221;, &#8220;uggghhhhhhhh&#8221;, &#8220;boyssssss&#8221; and others would mean.
+Instead of each status update considered individually, all the status
+updates for one day could be lumped together which, I believe, would
+help reduce noise in the data and give more precise results in terms
+of confidence with less precision in time. There are many ways to
+refine this model without much hassle.</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook can determine if a user is an alcoholic based on their pictures and messages they&#8217;ve sent to friends.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284116240304312320" data-datetime="2012-12-27T01:59:24+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>If a user is sending messages about &#8220;blacking out&#8221; or asking &#8220;what
+happened last night&#8221; then they might have an alcohol problem. Using
+computer vision, you could count the number of
+<a href="http://www.veerina.com/2012/Classyfying-Red-Cups.html">red cups that appear in photos</a>
+that a user is tagged in. The more cups there are in a user&#8217;s photos,
+the more likely a user might have a problem. <strong>Take the number of
+occurances of certain words and the number of red cups, run it through
+one of
+<a href="http://en.wikipedia.org/wiki/Category:Classification_algorithms">the dozens of classification algorithms</a>
+<a href="http://en.wikipedia.org/wiki/Training_set">with a training set</a>, and you have a system that can
+predict the chance that a user has alcoholism based on their profile</strong>.</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook knows approximately how many sexual partners you&#8217;ve had and tailors their ads based on that number.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284117064799617024" data-datetime="2012-12-27T02:02:41+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>Have you been looking at somebody&#8217;s profile a ton lately? Have they
+been looking at yours? Do you attend the same events as them? Have you
+been sending a bunch of messages back and forth lately with someone?
+<strong>Do any of your messages contain something along the lines of &#8220;Last
+night was amazing ;)&#8221;?</strong> All of that information can be used to
+predict whether two people have had sex. Using that same method on
+every person a user has interacted with and you have the expected
+value of the number of sexual partners and information with which you
+can construct sexual orientation.</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook knows when you will be sick a week before you the first symptoms show.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284117443293609984" data-datetime="2012-12-27T02:04:11+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>Checking the phone less often from the gym? Checking into Facebook
+late at night, disrupting your sleep schedule? Status updates about
+how stressed out you are? In a week or two, you will probably be sick
+and Facebook will have known about it before you even had the first
+symptom.</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook can predict, with a 95% confidence interval of 5 years, when you will die and how.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284119586666864640" data-datetime="2012-12-27T02:12:42+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>Facebook has all of the information needed to construct a highly
+accurate <a href="http://en.wikipedia.org/wiki/Life_table">life table</a>. They
+know everything about the lives of roughly a billion people across the
+globe. They have systems in place for finding out when a person is
+dead and can use that information to start constructing massive life
+tables based on user&#8217;s age, location, gender, sexual orientation, what
+they liked on facebook, and who they were friends with. While it might
+be a stretch to say that Facebook can predict cause of death, time of
+death is well within the realm of possibility.</p>
+
+<p>So. <strong>Facebook probably knows more about your life than you ever will
+know.</strong>  Why does that matter?</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook will be selling all of the information above and more to insurance companies within 5 years.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284120780323827712" data-datetime="2012-12-27T02:17:27+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>Facebook needs to make money. Under the stated assumption, advertising
+isn&#8217;t going to cut it. <strong> My main fear is that Facebook would soon be selling
+information about me that even I don&#8217;t know.</strong></p>
+
+<p>Who would want to buy detailed information about you, you ask?</p>
+
+<ul>
+<li>College admissions: How often does this person study, are
+their parents wealthy?</li>
+<li>Insurance companies: What are the health risks of insuring this
+person, does this person&#8217;s family have a history of depression,
+how often do users who like &#8216;Texting at Red Lights&#8217; get into car
+accidents, what is the chance that this user will get an STD in
+the future?</li>
+<li>Employers: Does this person complain about work often, Does this
+person work late at night, does this person have friends who we
+can recruit later, has this person ever slept with someone from
+work?</li>
+<li>Identity thieves: Soooooo, how much do I need to pay to know <strong>everything</strong>
+about a person?</li>
+<li>Banks: What is the credit score for people who like &#8216;Student
+loans suck&#8217;, what is the credit score for user based on who his
+friends are?</li>
+<li>The IRS: What is the difference between how much this person
+ reported on their taxes and users like this person?</li>
+<li>Oppressive governments: Where is this user, who are this user&#8217;s
+friends and families?</li>
+</ul>
+
+
+<p>So, I think it will soon be in Facebook&#8217;s best interest to start
+selling users&#8217; information to parties who will use this information in
+ways that are not in users&#8217; best interest. Your life will be moving
+more towards a completely asymmetrical model of knowledge: parties who
+you don&#8217;t know exist will know more about your life than you do. As
+soon as companies figure out they can use this information to their
+advantage, they will throw as many resources at it as they can. I can
+imagine far more negative consequences of greater magnitude of this
+knowledge difference than I can of positive consequences. Bluntly, <strong>I
+think you are fucked if you have a Facebook account</strong>.</p>
+
+<hr />
+
+<p><strong> Bonus </strong></p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that if Facebook thought you would click on more ads when you were single, it would try to ruin your marriage or relationship.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284121414401933312" data-datetime="2012-12-27T02:19:58+00:00">December 27, 2012</a></blockquote>
+<script async src="http://zmaril.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p></p>
+
+<p>If this were implemented at Facebook, whoever did it will probably
+take that secret to her gold-lined grave. Facebook would probably have him
+killed if she tried to talk. (I&#8217;m only half joking about Zuck having
+someone killed).</p>
+
+<hr />
+
+<p><strong> Double Bounus </strong></p>
+
+<p>You might be able to delete your profile (<a href="http://www.wikihow.com/Permanently-Delete-a-Facebook-Account">it takes two weeks</a>), but there is no
+way you can get Facebook to throw out your data. If you want to mess
+up their systems, you really only have one option that I can think of:
+start throwing in random noise into your profile for a few weeks or
+months before you wipe your profile and then delete it. Tag yourself
+in pictures as people who you obviously are not. Change your birthday
+often. Like things that you don&#8217;t like. Message people you wouldn&#8217;t
+normally message. Defriend a ton of people and add in some random
+people of various types (local and global). Change your name. Do
+whatever you can think of that you wouldn&#8217;t normally do.</p>
+
+<p>And then at the very end of it all, remove all of your information
+from Facebook. Some crazy unicode name, no friends, no pictures, no
+likes, all of your settings changed to strictest privacy possible.
+They will have a record of everything you did, but they will have to
+be very, very careful about how they use your data from now on. If an
+intern messes up and only uses dead profiles as they last appeared,
+then you will be a ghost. If an engineer messes up and doesn&#8217;t account
+for the random noise at the end, then your profile will be worthless
+to them. Beyond that, that is really all you can do. They already know
+everything about you; all you can do is help them make mistakes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Left]]></title>
+    <link href="http://zmaril.github.com/blog/2012/12/12/left/"/>
+    <updated>2012-12-12T00:00:00-05:00</updated>
+    <id>http://zmaril.github.com/blog/2012/12/12/left</id>
+    <content type="html"><![CDATA[<p>Left is a clean, whitespace-happy layout for <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
+
+<p>At least it was until I got my hands on it. Big thanks to
+<a href="https://twitter.com/holman">@holman</a> for opensourcing all this.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ideas about the future of d3 and related technologies]]></title>
+    <link href="http://zmaril.github.com/blog/2012/07/10/ideas-about-future-of-d3/"/>
+    <updated>2012-07-10T23:31:00-04:00</updated>
+    <id>http://zmaril.github.com/blog/2012/07/10/ideas-about-future-of-d3</id>
+    <content type="html"><![CDATA[<p>Lately, I&#8217;ve been working with <a href="http://d3js.org/">d3.js</a> a good deal. I&#8217;ve created
+several <a href="https://github.com/zmaril/d3.js-boilerplate">open source</a> <a href="https://github.com/zmaril/d3-bootstrap-plugins">d3.js projects</a>,
+participated in the <a href="https://groups.google.com/forum/?fromgroups#!searchin/d3-js/zack$20maril">d3.js mailing list</a>, and
+<a href="https://www.odesk.com/blog/2012/07/visualizations-of-odesk-oconomy/">successfully released</a> a rather large
+<a href="http://research.odesk.com/visualizations/country-dashboard/">d3.js project</a>. I have at least as much perspective as a
+self taught college kid can have at this point. Here are some ideas
+that I&#8217;ve had about moving d3.js and related technologies
+forward. They&#8217;ve been broken into the more general ideas first and the
+backbone related ideas last. My hope is that this will cause one of
+three things to happen:</p>
+
+<ul>
+<li>I&#8217;ll get motivated and make some of this happen.</li>
+<li>Somebody else will get motivated and make some of this happen.</li>
+<li>Somebody will point out that these things have been done and
+everyone can be lazy.</li>
+</ul>
+
+
+<h1>General Ideas</h1>
+
+<h2>Encourage and use coffeescript</h2>
+
+<p>The function syntax, fat arrow, and object creation sugar are the
+features that saved me the most time in aggregate. With d3.js you are
+writing a lot of functions that are just object property retrievers,
+so the terse syntax comes in handy (<code>(ob)-&gt; ob.x</code>). Debugging is a
+slight pain in that line numbers don&#8217;t typically match up. For me, it
+has been a net win. As I get better with coffeescript and d3.js,
+debugging time will hopefully go down while I learn more useful
+features.</p>
+
+<h2>Use grunt</h2>
+
+<p><a href="http://ireneros.com/">Irene Ros</a> pointed out
+<a href="https://github.com/cowboy/grunt">grunt</a> to me and it was love at
+first sight. I&#8217;ve been using it with the
+<a href="https://github.com/zmaril/d3-bootstrap-plugins">d3-bootstrap-plugin</a>
+project and it has
+<a href="https://github.com/zmaril/d3-bootstrap-plugins">helped immensely</a>
+with development. It&#8217;s really amazing how freeing <code>grunt</code> and <code>grunt
+build</code> can be. I am looking to learn more about the system. If I could
+automatically run <code>python -m SimpleHTTPServer</code> when I do <code>grunt
+watch</code>, I would be way happy. I&#8217;ll try and do a post on using grunt
+and d3, but it isn&#8217;t too hard to <a href="http://net.tutsplus.com/tutorials/javascript-ajax/meeting-grunt-the-build-tool-for-javascript/">figure out in an afternoon</a>.</p>
+
+<h2>Testing visualizations with saved images</h2>
+
+<p>A problem I&#8217;ve had is that I really want to start writing tests for my
+visualizations. They have started to get sufficiently complex in some
+cases and things have broken down for several hours/days before I was
+able to notice them again. Stressful.There aren&#8217;t too many solutions
+to this that I know of. You can test the DOM pretty easily with the
+various testing libraries out there. But that&#8217;s almost a direct test
+of d3.js itself in most cases. Not incredibly useful given that d3.js
+already has
+<a href="https://github.com/mbostock/d3/tree/master/test">pretty good test coverage</a>.</p>
+
+<p>A possible solution for this is to create a collection of saved images
+that represent what the visualization should look like. You could pair
+<a href="http://seleniumhq.org/">the selenium webdriver</a> with a framework like
+<a href="http://docs.jquery.com/QUnit">qunit</a> or
+<a href="http://pivotal.github.com/jasmine/">jasmine</a> to create a image driven
+test suite. You would have a program that walks you through the tests
+one by one, displays the image, and asks &#8220;Is this what you expected?&#8221;
+It then saves all of the reference images. Each time you run the
+tests, it would go back through and recapture all of the pictures. A
+test would fail if the picture wasn&#8217;t within a set threshold for
+deviation of pixels. You could get really fancy with this and take
+snapshots of images as things get interacted with randomly, as well as
+have UI exploration based on the state of the javascript
+environment (Clojure/script would probably be a pretty good tool for
+this sort of thing). The main point is that I want to write tests that
+use saved images as the method for evaluating whether or not the test
+passes. No speculation on difficulty, prior art, implementation, and
+performance from me at this point. I currently don&#8217;t have plans to do
+anything related to this.</p>
+
+<h1>Combining d3.js and backbone</h1>
+
+<p>Let&#8217;s get some context for the upcoming ideas. From what I can tell,
+the two major frameworks for d3.js right now are
+<a href="http://nvd3.com/">nvd3</a> and
+<a href="https://github.com/michael/dance">dance.js</a>.</p>
+
+<p>nvd3 is a general charting library that has gotten a fair bit of press
+lately. I watch it on github and I&#8217;ve seen a marked increase in terms
+of rate of commits and issues added to the project day after
+day. People are excited about the idea of a general framework with
+d3. nvd3 is a good idea with a smart/motivated developer behind it and
+could end up displacing highcharts.</p>
+
+<p>dance.js is a project that I have admired from afar at this point. I
+view it as one of those projects that is fun and will teach the
+developer a ton. It might not ever end up use in production, but it
+doesn&#8217;t matter. The developer will write better code all around
+because of it. Really, go take a look a look at it. It&#8217;s fun to read
+through and think about the abstractions that are being created. It&#8217;s
+got some obscure libraries as dependencies and purposefully
+reimplements half of backbone.</p>
+
+<p>So, as far as I know, that is the current state of the major open source d3
+frameworks. There is
+<a href="https://github.com/shutterstock/rickshaw">Rickshaw</a> for time series,
+but it isn&#8217;t
+<a href="https://github.com/shutterstock/rickshaw/commits/master">actively being developed further beyond maintenance</a>
+as far as I can tell. There has been some excellent talk about
+<a href="http://corner.squareup.com/2012/04/building-analytics.html">combining ember.js and d3</a>,
+but not much open source has come out of it. This is the most active
+<a href="http://cmeiklejohn.github.com/ember-visualizations/">ember+d3</a> work
+I&#8217;ve been able to find. As far as backbone and d3 goes, there is <a href="http://drsm79.github.com/Backbone-d3/">a
+project</a> silently gathering
+dust on github and <a href="https://github.com/jondot/graphene">graphene</a>,
+which is <a href="https://github.com/jondot/graphene">semiactive</a>.</p>
+
+<p><strong>tl;dr Try to use nvd3 if you want free/pretty d3 charts now.</strong></p>
+
+<p>(Note: As of December 2012, much of this information is no longer
+correct. Rickshaw is getting love, ember and d3 are being combined
+together well, and, well, open source is moving forward.)</p>
+
+<h2>Eidetic backbone</h2>
+
+<p>Moving towards new ideas, a month or so back, I noticed that backbone
+and ember allowed you to manage the URL in neat ways with
+<a href="http://backbonetutorials.com/what-is-a-router/">javascript based routers</a>. At
+the time, backbone had better documentation about getting started, so
+I choose backbone and got started using the routes to encode the state
+of the interface of the oDesk country dashboard. This meant I could
+link directly to the project bubbles of
+<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble/Russia">Russia</a>
+and
+<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble/Canada">Canada</a>
+with very little effort.  This was way cool and set me down the path
+of thinking through how to combine backbone and d3.js to produce
+excellent visualizations with very little developer effort.</p>
+
+<p>The basic abstraction was encoding the state of an interface within
+the URL. This allowed people to directly link to pieces of a
+visualization as well as making the backbone much more useful (trying
+messing around with the oDesk visualization and then hitting the back
+button). I
+<a href="https://github.com/johnjosephhorton/gg2d3/blob/master/country-dashboard/js/index.coffee">implemented this in a messy way</a>,
+with a ton of calls to router.navigate littered throughout the
+code. It got the job done.</p>
+
+<p>Generalizing away from this, we can start thinking in terms of the
+state of the interface. For the oDesk visualization, the state of the
+interface depended on the section being displayed. For the
+<a href="http://research.odesk.com/visualizations/country-dashboard/#/compare">compare section</a>,
+we encoded the selected countries within the URL as well as whether
+the top graph was being displayed in absolute or log scale. For the
+<a href="http://research.odesk.com/visualizations/country-dashboard/#/watch/false/42">watch section</a>,
+we encoded the hour being displayed as well as whether we are using a
+relative or absolute scale. The
+<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble">bubble section</a>
+recorded only the country within the URL. If you crawl through the
+github repo hard enough, you can probably find all the instances
+across the multiple files where I reference variables like
+selectedCountries and what not.</p>
+
+<p>Here&#8217;s what I wish I could have written (in coffeescript):</p>
+
+<div>
+  <pre><code class='coffeescript'>CompareState = Backbone.Model
+    countries: [&quot;India&quot;,&quot;Denial&quot;,&quot;`Murica&quot;]
+    log: true
+
+WatchState = Backbone.Model
+    time: 42
+    log: true
+
+BubbleState = Backbone.Model
+    country: &quot;Canananada&quot;
+
+Eidetic.Router.extend
+    routes:
+        compare:
+            model: CompareState
+        
+            toUrl: ()-&gt;
+                countries = encodeURI(@countries.join[&quot;/&quot;])
+                &quot;/#{@log}/#{countries}&quot;
+                
+            fromURL: (url)-&gt;
+               sections = url.split('/')
+               log = sections[0] is &quot;true&quot;
+               countries = (decodeURI(c) for c in sections[1..])
+               @model.set
+                   log: log
+                   countries: countries
+                   
+            callback: &quot;compare&quot;
+
+        watch:
+            model: WatchState
+        
+            toUrl: ()-&gt; &quot;/#{@attributes.log}/#{@attributes.time}&quot;
+                
+            fromURL: (url)-&gt;
+               sections = url.split('/')
+               log = sections[0] is &quot;true&quot;
+               time = +sections[1]
+               @model.set
+                   log: log
+                   time: time
+                   
+           callback: &quot;watch&quot;
+
+        bubble:
+            model: BubbleState
+        
+            toUrl: (model)-&gt; &quot;/#{model.country}&quot;
+                
+            fromURL: (url)-&gt;
+               @model.set
+                   country: url.replace('/',&quot;&quot;)
+                   
+            callback: &quot;watch&quot;
+
+    compare: ()-&gt; #display compare html. No updating of url's here.
+        compareView.update()
+    watch: ()-&gt; #display watch html. No updating of url's here either.
+        watchView.update()
+    bubble: ()-&gt; #You know what is up by now.
+        bubbleView.update()</code></pre>
+</div>
+
+
+<p>What would ideally happen is that the
+<a href="http://en.wikipedia.org/wiki/Eidetic_memory">Eidetic</a> router would
+hook up the model such that whenever the model changed the router
+would change as well. In addition, the Eidetic router would take the
+inbound url and set up the State model correctly. The design behind
+the API is still pretty rough honestly. I&#8217;ve spent most of my time so
+far just playing around with how to structure this idea of storing the
+state of the interface within the URL. I have a
+<a href="https://github.com/zmaril/Eidetic">repo set up for development</a>, but
+only within the past few days have I gotten an idea about where to
+take the design of the API. I suspect within the next month I will
+have something usable up there.</p>
+
+<p>Why does this matter for d3.js though? This would be developed purely
+as an extension of backbone. As I got better with d3.js, my sights
+start to soar. I wanted to create the next big dashboard. And
+&#8220;Wouldn&#8217;t it be cool if state crossed over between those two charts?
+Woah! That&#8217;s awesome! Let&#8217;s do it again! Three charts! Four charts and
+legend! Wait. Why is it broken? Where is my state?&#8221;  It&#8217;s part of
+solution to the puzzle of managing a complex interface that has
+multiple interactive and connected charts.</p>
+
+<p>I want to put all of my important state in one place and I want the
+URL to denote and remember the state of the interface. I don&#8217;t want to
+have to design a complex framework each time I set out to design a
+complex dashboard. backbone would handle the state abstractions and d3
+handles the svg. The Eidetic router is not a hard hack to do, but I
+really want to nail the API design from the get go. Looking at it now,
+I will probably move the callbacks straight into the route
+definition. Maybe.</p>
+
+<h2>d3.js charts as backbone views</h2>
+
+<p>Now that we have gotten into the spirit of thinking with backbone,
+let&#8217;s start thinking about collections and reusable charts. Here&#8217;s an
+example of what I mean:</p>
+
+<div>
+  <pre><code class='coffeescript'>Book = Backbone.Model
+
+Books = Backbone.Collection.extend
+    model: Book
+
+Books.add({pages: Math.round(Math.random()*250)} for i in [0..100])
+
+Histogram = Backbone.view.extend
+    initialize: ()-&gt;
+        @svg = {}
+        @svg.svg = d3.select(@el).apppend(&quot;svg&quot;)
+            .attr(&quot;height&quot;,@options.height)
+            .attr(&quot;width&quot;,@options.width)
+            .classed(&quot;histogram&quot;)
+            
+        @svg.bars = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;bars&quot;)
+        @svg.axis = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;axis&quot;)
+
+        @d3 = {}
+        @d3.hist =  d3.layout.histogram()
+            .value(@options.value)
+
+    render: ()-&gt;
+        bins = @d3.hist(@collection)
+        #Make all of this actually work
+        @d3.x = d3.scale().range
+        @svg.bars.selectAll(&quot;rect&quot;).data(bins).enter()
+            .append(&quot;rect&quot;)
+            .scale
+        #If I wasn't lazy, code for the axis would be here
+
+    remove: ()-&gt; 
+        @svg.svg.remove()
+
+BooksHistogram = Histogram
+    collection: Books
+    element: document.getElementById(&quot;#booksHistogram&quot;)
+    value: (d)-&gt; d.get(&quot;pages&quot;)
+    height: 200
+    width: 200</code></pre>
+</div>
+
+
+<p>And bam! You have a histogram of the books! That updates dynamically
+as your backbone data does! And the implementation is reusable for other
+models. This is what I see coming from combining backbone and d3
+together.</p>
+
+<p>That is most of what I was thinking about while working on the oDesk project.</p>
+]]></content>
+  </entry>
   
 </feed>

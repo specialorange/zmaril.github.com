@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>Why I don't have a Facebook account - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
@@ -20,7 +20,7 @@ I&#8217; &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://zmaril.github.com/">
+  <link rel="canonical" href="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -64,15 +64,12 @@ I&#8217; &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/27/Why-I-dont-have-a-Facebook/">Why I Don&#8217;t Have a Facebook Account</a></h1>
+      <h1 class="entry-title">Why I Don't Have a Facebook Account</h1>
     
     
       <p class="meta">
@@ -95,7 +92,7 @@ I&#8217; &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>In the past past three years, I&#8217;ve lived in Chicago (IL), College
+<div class="entry-content"><p>In the past past three years, I&#8217;ve lived in Chicago (IL), College
 Station (TX), Urbana (IL), Cincinnati (OH), and Mountain View (CA).
 I&#8217;ve spent at least three months in each place and gotten to know and
 love a good number of people from all over. I have friends who travel
@@ -339,61 +336,16 @@ for the random noise at the end, then your profile will be worthless
 to them. Beyond that, that is really all you can do. They already know
 everything about you; all you can do is help them make mistakes.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/12/left/">Left</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
 
-<time datetime="2012-12-12T00:00:00-05:00" pubdate data-updated="true">Dec 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Left is a clean, whitespace-happy layout for <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
-
-<p>At least it was until I got my hands on it. Big thanks to
-<a href="https://twitter.com/holman">@holman</a> for opensourcing all this.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/ideas-about-future-of-d3/">Ideas About the Future of D3 and Related Technologies</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -405,342 +357,38 @@ everything about you; all you can do is help them make mistakes.</p>
   
 
 
-<time datetime="2012-07-10T23:31:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-12-27T00:00:00-05:00" pubdate data-updated="true">Dec 27<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/posts/'>posts</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Lately, I&#8217;ve been working with <a href="http://d3js.org/">d3.js</a> a good deal. I&#8217;ve created
-several <a href="https://github.com/zmaril/d3.js-boilerplate">open source</a> <a href="https://github.com/zmaril/d3-bootstrap-plugins">d3.js projects</a>,
-participated in the <a href="https://groups.google.com/forum/?fromgroups#!searchin/d3-js/zack$20maril">d3.js mailing list</a>, and
-<a href="https://www.odesk.com/blog/2012/07/visualizations-of-odesk-oconomy/">successfully released</a> a rather large
-<a href="http://research.odesk.com/visualizations/country-dashboard/">d3.js project</a>. I have at least as much perspective as a
-self taught college kid can have at this point. Here are some ideas
-that I&#8217;ve had about moving d3.js and related technologies
-forward. They&#8217;ve been broken into the more general ideas first and the
-backbone related ideas last. My hope is that this will cause one of
-three things to happen:</p>
-
-<ul>
-<li>I&#8217;ll get motivated and make some of this happen.</li>
-<li>Somebody else will get motivated and make some of this happen.</li>
-<li>Somebody will point out that these things have been done and
-everyone can be lazy.</li>
-</ul>
-
-
-<h1>General Ideas</h1>
-
-<h2>Encourage and use coffeescript</h2>
-
-<p>The function syntax, fat arrow, and object creation sugar are the
-features that saved me the most time in aggregate. With d3.js you are
-writing a lot of functions that are just object property retrievers,
-so the terse syntax comes in handy (<code>(ob)-&gt; ob.x</code>). Debugging is a
-slight pain in that line numbers don&#8217;t typically match up. For me, it
-has been a net win. As I get better with coffeescript and d3.js,
-debugging time will hopefully go down while I learn more useful
-features.</p>
-
-<h2>Use grunt</h2>
-
-<p><a href="http://ireneros.com/">Irene Ros</a> pointed out
-<a href="https://github.com/cowboy/grunt">grunt</a> to me and it was love at
-first sight. I&#8217;ve been using it with the
-<a href="https://github.com/zmaril/d3-bootstrap-plugins">d3-bootstrap-plugin</a>
-project and it has
-<a href="https://github.com/zmaril/d3-bootstrap-plugins">helped immensely</a>
-with development. It&#8217;s really amazing how freeing <code>grunt</code> and <code>grunt
-build</code> can be. I am looking to learn more about the system. If I could
-automatically run <code>python -m SimpleHTTPServer</code> when I do <code>grunt
-watch</code>, I would be way happy. I&#8217;ll try and do a post on using grunt
-and d3, but it isn&#8217;t too hard to <a href="http://net.tutsplus.com/tutorials/javascript-ajax/meeting-grunt-the-build-tool-for-javascript/">figure out in an afternoon</a>.</p>
-
-<h2>Testing visualizations with saved images</h2>
-
-<p>A problem I&#8217;ve had is that I really want to start writing tests for my
-visualizations. They have started to get sufficiently complex in some
-cases and things have broken down for several hours/days before I was
-able to notice them again. Stressful.There aren&#8217;t too many solutions
-to this that I know of. You can test the DOM pretty easily with the
-various testing libraries out there. But that&#8217;s almost a direct test
-of d3.js itself in most cases. Not incredibly useful given that d3.js
-already has
-<a href="https://github.com/mbostock/d3/tree/master/test">pretty good test coverage</a>.</p>
-
-<p>A possible solution for this is to create a collection of saved images
-that represent what the visualization should look like. You could pair
-<a href="http://seleniumhq.org/">the selenium webdriver</a> with a framework like
-<a href="http://docs.jquery.com/QUnit">qunit</a> or
-<a href="http://pivotal.github.com/jasmine/">jasmine</a> to create a image driven
-test suite. You would have a program that walks you through the tests
-one by one, displays the image, and asks &#8220;Is this what you expected?&#8221;
-It then saves all of the reference images. Each time you run the
-tests, it would go back through and recapture all of the pictures. A
-test would fail if the picture wasn&#8217;t within a set threshold for
-deviation of pixels. You could get really fancy with this and take
-snapshots of images as things get interacted with randomly, as well as
-have UI exploration based on the state of the javascript
-environment (Clojure/script would probably be a pretty good tool for
-this sort of thing). The main point is that I want to write tests that
-use saved images as the method for evaluating whether or not the test
-passes. No speculation on difficulty, prior art, implementation, and
-performance from me at this point. I currently don&#8217;t have plans to do
-anything related to this.</p>
-
-<h1>Combining d3.js and backbone</h1>
-
-<p>Let&#8217;s get some context for the upcoming ideas. From what I can tell,
-the two major frameworks for d3.js right now are
-<a href="http://nvd3.com/">nvd3</a> and
-<a href="https://github.com/michael/dance">dance.js</a>.</p>
-
-<p>nvd3 is a general charting library that has gotten a fair bit of press
-lately. I watch it on github and I&#8217;ve seen a marked increase in terms
-of rate of commits and issues added to the project day after
-day. People are excited about the idea of a general framework with
-d3. nvd3 is a good idea with a smart/motivated developer behind it and
-could end up displacing highcharts.</p>
-
-<p>dance.js is a project that I have admired from afar at this point. I
-view it as one of those projects that is fun and will teach the
-developer a ton. It might not ever end up use in production, but it
-doesn&#8217;t matter. The developer will write better code all around
-because of it. Really, go take a look a look at it. It&#8217;s fun to read
-through and think about the abstractions that are being created. It&#8217;s
-got some obscure libraries as dependencies and purposefully
-reimplements half of backbone.</p>
-
-<p>So, as far as I know, that is the current state of the major open source d3
-frameworks. There is
-<a href="https://github.com/shutterstock/rickshaw">Rickshaw</a> for time series,
-but it isn&#8217;t
-<a href="https://github.com/shutterstock/rickshaw/commits/master">actively being developed further beyond maintenance</a>
-as far as I can tell. There has been some excellent talk about
-<a href="http://corner.squareup.com/2012/04/building-analytics.html">combining ember.js and d3</a>,
-but not much open source has come out of it. This is the most active
-<a href="http://cmeiklejohn.github.com/ember-visualizations/">ember+d3</a> work
-I&#8217;ve been able to find. As far as backbone and d3 goes, there is <a href="http://drsm79.github.com/Backbone-d3/">a
-project</a> silently gathering
-dust on github and <a href="https://github.com/jondot/graphene">graphene</a>,
-which is <a href="https://github.com/jondot/graphene">semiactive</a>.</p>
-
-<p><strong>tl;dr Try to use nvd3 if you want free/pretty d3 charts now.</strong></p>
-
-<p>(Note: As of December 2012, much of this information is no longer
-correct. Rickshaw is getting love, ember and d3 are being combined
-together well, and, well, open source is moving forward.)</p>
-
-<h2>Eidetic backbone</h2>
-
-<p>Moving towards new ideas, a month or so back, I noticed that backbone
-and ember allowed you to manage the URL in neat ways with
-<a href="http://backbonetutorials.com/what-is-a-router/">javascript based routers</a>. At
-the time, backbone had better documentation about getting started, so
-I choose backbone and got started using the routes to encode the state
-of the interface of the oDesk country dashboard. This meant I could
-link directly to the project bubbles of
-<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble/Russia">Russia</a>
-and
-<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble/Canada">Canada</a>
-with very little effort.  This was way cool and set me down the path
-of thinking through how to combine backbone and d3.js to produce
-excellent visualizations with very little developer effort.</p>
-
-<p>The basic abstraction was encoding the state of an interface within
-the URL. This allowed people to directly link to pieces of a
-visualization as well as making the backbone much more useful (trying
-messing around with the oDesk visualization and then hitting the back
-button). I
-<a href="https://github.com/johnjosephhorton/gg2d3/blob/master/country-dashboard/js/index.coffee">implemented this in a messy way</a>,
-with a ton of calls to router.navigate littered throughout the
-code. It got the job done.</p>
-
-<p>Generalizing away from this, we can start thinking in terms of the
-state of the interface. For the oDesk visualization, the state of the
-interface depended on the section being displayed. For the
-<a href="http://research.odesk.com/visualizations/country-dashboard/#/compare">compare section</a>,
-we encoded the selected countries within the URL as well as whether
-the top graph was being displayed in absolute or log scale. For the
-<a href="http://research.odesk.com/visualizations/country-dashboard/#/watch/false/42">watch section</a>,
-we encoded the hour being displayed as well as whether we are using a
-relative or absolute scale. The
-<a href="http://research.odesk.com/visualizations/country-dashboard/#/bubble">bubble section</a>
-recorded only the country within the URL. If you crawl through the
-github repo hard enough, you can probably find all the instances
-across the multiple files where I reference variables like
-selectedCountries and what not.</p>
-
-<p>Here&#8217;s what I wish I could have written (in coffeescript):</p>
-
-<div>
-  <pre><code class='coffeescript'>CompareState = Backbone.Model
-    countries: [&quot;India&quot;,&quot;Denial&quot;,&quot;`Murica&quot;]
-    log: true
-
-WatchState = Backbone.Model
-    time: 42
-    log: true
-
-BubbleState = Backbone.Model
-    country: &quot;Canananada&quot;
-
-Eidetic.Router.extend
-    routes:
-        compare:
-            model: CompareState
-        
-            toUrl: ()-&gt;
-                countries = encodeURI(@countries.join[&quot;/&quot;])
-                &quot;/#{@log}/#{countries}&quot;
-                
-            fromURL: (url)-&gt;
-               sections = url.split('/')
-               log = sections[0] is &quot;true&quot;
-               countries = (decodeURI(c) for c in sections[1..])
-               @model.set
-                   log: log
-                   countries: countries
-                   
-            callback: &quot;compare&quot;
-
-        watch:
-            model: WatchState
-        
-            toUrl: ()-&gt; &quot;/#{@attributes.log}/#{@attributes.time}&quot;
-                
-            fromURL: (url)-&gt;
-               sections = url.split('/')
-               log = sections[0] is &quot;true&quot;
-               time = +sections[1]
-               @model.set
-                   log: log
-                   time: time
-                   
-           callback: &quot;watch&quot;
-
-        bubble:
-            model: BubbleState
-        
-            toUrl: (model)-&gt; &quot;/#{model.country}&quot;
-                
-            fromURL: (url)-&gt;
-               @model.set
-                   country: url.replace('/',&quot;&quot;)
-                   
-            callback: &quot;watch&quot;
-
-    compare: ()-&gt; #display compare html. No updating of url's here.
-        compareView.update()
-    watch: ()-&gt; #display watch html. No updating of url's here either.
-        watchView.update()
-    bubble: ()-&gt; #You know what is up by now.
-        bubbleView.update()</code></pre>
-</div>
-
-
-<p>What would ideally happen is that the
-<a href="http://en.wikipedia.org/wiki/Eidetic_memory">Eidetic</a> router would
-hook up the model such that whenever the model changed the router
-would change as well. In addition, the Eidetic router would take the
-inbound url and set up the State model correctly. The design behind
-the API is still pretty rough honestly. I&#8217;ve spent most of my time so
-far just playing around with how to structure this idea of storing the
-state of the interface within the URL. I have a
-<a href="https://github.com/zmaril/Eidetic">repo set up for development</a>, but
-only within the past few days have I gotten an idea about where to
-take the design of the API. I suspect within the next month I will
-have something usable up there.</p>
-
-<p>Why does this matter for d3.js though? This would be developed purely
-as an extension of backbone. As I got better with d3.js, my sights
-start to soar. I wanted to create the next big dashboard. And
-&#8220;Wouldn&#8217;t it be cool if state crossed over between those two charts?
-Woah! That&#8217;s awesome! Let&#8217;s do it again! Three charts! Four charts and
-legend! Wait. Why is it broken? Where is my state?&#8221;  It&#8217;s part of
-solution to the puzzle of managing a complex interface that has
-multiple interactive and connected charts.</p>
-
-<p>I want to put all of my important state in one place and I want the
-URL to denote and remember the state of the interface. I don&#8217;t want to
-have to design a complex framework each time I set out to design a
-complex dashboard. backbone would handle the state abstractions and d3
-handles the svg. The Eidetic router is not a hard hack to do, but I
-really want to nail the API design from the get go. Looking at it now,
-I will probably move the callbacks straight into the route
-definition. Maybe.</p>
-
-<h2>d3.js charts as backbone views</h2>
-
-<p>Now that we have gotten into the spirit of thinking with backbone,
-let&#8217;s start thinking about collections and reusable charts. Here&#8217;s an
-example of what I mean:</p>
-
-<div>
-  <pre><code class='coffeescript'>Book = Backbone.Model
-
-Books = Backbone.Collection.extend
-    model: Book
-
-Books.add({pages: Math.round(Math.random()*250)} for i in [0..100])
-
-Histogram = Backbone.view.extend
-    initialize: ()-&gt;
-        @svg = {}
-        @svg.svg = d3.select(@el).apppend(&quot;svg&quot;)
-            .attr(&quot;height&quot;,@options.height)
-            .attr(&quot;width&quot;,@options.width)
-            .classed(&quot;histogram&quot;)
-            
-        @svg.bars = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;bars&quot;)
-        @svg.axis = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;axis&quot;)
-
-        @d3 = {}
-        @d3.hist =  d3.layout.histogram()
-            .value(@options.value)
-
-    render: ()-&gt;
-        bins = @d3.hist(@collection)
-        #Make all of this actually work
-        @d3.x = d3.scale().range
-        @svg.bars.selectAll(&quot;rect&quot;).data(bins).enter()
-            .append(&quot;rect&quot;)
-            .scale
-        #If I wasn't lazy, code for the axis would be here
-
-    remove: ()-&gt; 
-        @svg.svg.remove()
-
-BooksHistogram = Histogram
-    collection: Books
-    element: document.getElementById(&quot;#booksHistogram&quot;)
-    value: (d)-&gt; d.get(&quot;pages&quot;)
-    height: 200
-    width: 200</code></pre>
-</div>
-
-
-<p>And bam! You have a histogram of the books! That updates dynamically
-as your backbone data does! And the implementation is reusable for other
-models. This is what I see coming from combining backbone and d3
-together.</p>
-
-<p>That is most of what I was thinking about while working on the oDesk project.</p>
-</div>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/" data-via="" data-counturl="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/" >Tweet</a>
   
   
-
-
-    </article>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/12/12/left/" title="Previous Post: Left">&laquo; Left</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -748,7 +396,7 @@ together.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/12/27/Why-I-dont-have-a-Facebook/">Why I don&#8217;t have a Facebook account</a>
+        <a href="/blog/2012/12/27/Why-I-dont-have-a-Facebook/">Why I don't have a Facebook account</a>
       </li>
     
       <li class="post">
@@ -769,6 +417,7 @@ together.</p>
 
   
 </aside>
+
 
     </div>
   </div>
