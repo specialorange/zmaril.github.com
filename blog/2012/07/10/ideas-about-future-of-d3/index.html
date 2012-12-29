@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ideas about the future of d3 and related technologies - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Ideas about the future of d3 and related technologies - Until the thought is gone</title>
+  <meta name="author" content="Zack Maril">
 
   
   <meta name="description" content="Lately, I&#8217;ve been working with d3.js a good deal. I&#8217;ve created
@@ -26,7 +26,7 @@ participated in the d3.js mailing list &hellip;">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Until the thought is gone" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,32 +36,6 @@ participated in the d3.js mailing list &hellip;">
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:zmaril.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
   <div id="main">
     <div id="content">
       <div>
@@ -83,6 +57,7 @@ participated in the d3.js mailing list &hellip;">
 
 
   
+
 
 
 <time datetime="2012-07-10T23:31:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
@@ -255,70 +230,131 @@ selectedCountries and what not.</p>
 
 <p>Here&#8217;s what I wish I could have written (in coffeescript):</p>
 
-<div>
-  <pre><code class='coffeescript'>CompareState = Backbone.Model
-    countries: [&quot;India&quot;,&quot;Denial&quot;,&quot;`Murica&quot;]
-    log: true
-
-WatchState = Backbone.Model
-    time: 42
-    log: true
-
-BubbleState = Backbone.Model
-    country: &quot;Canananada&quot;
-
-Eidetic.Router.extend
-    routes:
-        compare:
-            model: CompareState
-        
-            toUrl: ()-&gt;
-                countries = encodeURI(@countries.join[&quot;/&quot;])
-                &quot;/#{@log}/#{countries}&quot;
-                
-            fromURL: (url)-&gt;
-               sections = url.split('/')
-               log = sections[0] is &quot;true&quot;
-               countries = (decodeURI(c) for c in sections[1..])
-               @model.set
-                   log: log
-                   countries: countries
-                   
-            callback: &quot;compare&quot;
-
-        watch:
-            model: WatchState
-        
-            toUrl: ()-&gt; &quot;/#{@attributes.log}/#{@attributes.time}&quot;
-                
-            fromURL: (url)-&gt;
-               sections = url.split('/')
-               log = sections[0] is &quot;true&quot;
-               time = +sections[1]
-               @model.set
-                   log: log
-                   time: time
-                   
-           callback: &quot;watch&quot;
-
-        bubble:
-            model: BubbleState
-        
-            toUrl: (model)-&gt; &quot;/#{model.country}&quot;
-                
-            fromURL: (url)-&gt;
-               @model.set
-                   country: url.replace('/',&quot;&quot;)
-                   
-            callback: &quot;watch&quot;
-
-    compare: ()-&gt; #display compare html. No updating of url's here.
-        compareView.update()
-    watch: ()-&gt; #display watch html. No updating of url's here either.
-        watchView.update()
-    bubble: ()-&gt; #You know what is up by now.
-        bubbleView.update()</code></pre>
-</div>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nv">CompareState = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span>
+</span><span class='line'>    <span class="nv">countries: </span><span class="p">[</span><span class="s">&quot;India&quot;</span><span class="p">,</span><span class="s">&quot;Denial&quot;</span><span class="p">,</span><span class="s">&quot;`Murica&quot;</span><span class="p">]</span>
+</span><span class='line'>    <span class="nv">log: </span><span class="kc">true</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">WatchState = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span>
+</span><span class='line'>    <span class="nv">time: </span><span class="mi">42</span>
+</span><span class='line'>    <span class="nv">log: </span><span class="kc">true</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">BubbleState = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span>
+</span><span class='line'>    <span class="nv">country: </span><span class="s">&quot;Canananada&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Eidetic</span><span class="p">.</span><span class="nx">Router</span><span class="p">.</span><span class="nx">extend</span>
+</span><span class='line'>    <span class="nv">routes:</span>
+</span><span class='line'>        <span class="nv">compare:</span>
+</span><span class='line'>            <span class="nv">model: </span><span class="nx">CompareState</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">toUrl: </span><span class="nf">()-&gt;</span>
+</span><span class='line'>                <span class="nv">countries = </span><span class="nb">encodeURI</span><span class="p">(</span><span class="nx">@countries</span><span class="p">.</span><span class="nx">join</span><span class="p">[</span><span class="s">&quot;/&quot;</span><span class="p">])</span>
+</span><span class='line'>                <span class="s">&quot;/</span><span class="si">#{</span><span class="nx">@log</span><span class="si">}</span><span class="s">/</span><span class="si">#{</span><span class="nx">countries</span><span class="si">}</span><span class="s">&quot;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">fromURL: </span><span class="nf">(url)-&gt;</span>
+</span><span class='line'>               <span class="nv">sections = </span><span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'>               <span class="nv">log = </span><span class="nx">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">is</span> <span class="s">&quot;true&quot;</span>
+</span><span class='line'>               <span class="nv">countries = </span><span class="p">(</span><span class="nb">decodeURI</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="k">for</span> <span class="nx">c</span> <span class="k">in</span> <span class="nx">sections</span><span class="p">[</span><span class="mi">1</span><span class="p">..])</span>
+</span><span class='line'>               <span class="nx">@model</span><span class="p">.</span><span class="nx">set</span>
+</span><span class='line'>                   <span class="nv">log: </span><span class="nx">log</span>
+</span><span class='line'>                   <span class="nv">countries: </span><span class="nx">countries</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">callback: </span><span class="s">&quot;compare&quot;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">watch:</span>
+</span><span class='line'>            <span class="nv">model: </span><span class="nx">WatchState</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">toUrl: </span><span class="nf">()-&gt;</span> <span class="s">&quot;/</span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">log</span><span class="si">}</span><span class="s">/</span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">time</span><span class="si">}</span><span class="s">&quot;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">fromURL: </span><span class="nf">(url)-&gt;</span>
+</span><span class='line'>               <span class="nv">sections = </span><span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'>               <span class="nv">log = </span><span class="nx">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">is</span> <span class="s">&quot;true&quot;</span>
+</span><span class='line'>               <span class="nv">time = </span><span class="o">+</span><span class="nx">sections</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>               <span class="nx">@model</span><span class="p">.</span><span class="nx">set</span>
+</span><span class='line'>                   <span class="nv">log: </span><span class="nx">log</span>
+</span><span class='line'>                   <span class="nv">time: </span><span class="nx">time</span>
+</span><span class='line'>
+</span><span class='line'>           <span class="nv">callback: </span><span class="s">&quot;watch&quot;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">bubble:</span>
+</span><span class='line'>            <span class="nv">model: </span><span class="nx">BubbleState</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">toUrl: </span><span class="nf">(model)-&gt;</span> <span class="s">&quot;/</span><span class="si">#{</span><span class="nx">model</span><span class="p">.</span><span class="nx">country</span><span class="si">}</span><span class="s">&quot;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">fromURL: </span><span class="nf">(url)-&gt;</span>
+</span><span class='line'>               <span class="nx">@model</span><span class="p">.</span><span class="nx">set</span>
+</span><span class='line'>                   <span class="nv">country: </span><span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="nv">callback: </span><span class="s">&quot;watch&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">compare: </span><span class="nf">()-&gt;</span> <span class="c1">#display compare html. No updating of url&#39;s here.</span>
+</span><span class='line'>        <span class="nx">compareView</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">watch: </span><span class="nf">()-&gt;</span> <span class="c1">#display watch html. No updating of url&#39;s here either.</span>
+</span><span class='line'>        <span class="nx">watchView</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">bubble: </span><span class="nf">()-&gt;</span> <span class="c1">#You know what is up by now.</span>
+</span><span class='line'>        <span class="nx">bubbleView</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>What would ideally happen is that the
@@ -358,48 +394,87 @@ definition. Maybe.</p>
 let&#8217;s start thinking about collections and reusable charts. Here&#8217;s an
 example of what I mean:</p>
 
-<div>
-  <pre><code class='coffeescript'>Book = Backbone.Model
-
-Books = Backbone.Collection.extend
-    model: Book
-
-Books.add({pages: Math.round(Math.random()*250)} for i in [0..100])
-
-Histogram = Backbone.view.extend
-    initialize: ()-&gt;
-        @svg = {}
-        @svg.svg = d3.select(@el).apppend(&quot;svg&quot;)
-            .attr(&quot;height&quot;,@options.height)
-            .attr(&quot;width&quot;,@options.width)
-            .classed(&quot;histogram&quot;)
-            
-        @svg.bars = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;bars&quot;)
-        @svg.axis = @svg.svg.append(&quot;g&quot;).attr(&quot;id&quot;,&quot;axis&quot;)
-
-        @d3 = {}
-        @d3.hist =  d3.layout.histogram()
-            .value(@options.value)
-
-    render: ()-&gt;
-        bins = @d3.hist(@collection)
-        #Make all of this actually work
-        @d3.x = d3.scale().range
-        @svg.bars.selectAll(&quot;rect&quot;).data(bins).enter()
-            .append(&quot;rect&quot;)
-            .scale
-        #If I wasn't lazy, code for the axis would be here
-
-    remove: ()-&gt; 
-        @svg.svg.remove()
-
-BooksHistogram = Histogram
-    collection: Books
-    element: document.getElementById(&quot;#booksHistogram&quot;)
-    value: (d)-&gt; d.get(&quot;pages&quot;)
-    height: 200
-    width: 200</code></pre>
-</div>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nv">Book = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">Books = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span>
+</span><span class='line'>    <span class="nv">model: </span><span class="nx">Book</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Books</span><span class="p">.</span><span class="nx">add</span><span class="p">({</span><span class="nv">pages: </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">250</span><span class="p">)}</span> <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">100</span><span class="p">])</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">Histogram = </span><span class="nx">Backbone</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">extend</span>
+</span><span class='line'>    <span class="nv">initialize: </span><span class="nf">()-&gt;</span>
+</span><span class='line'>        <span class="vi">@svg = </span><span class="p">{}</span>
+</span><span class='line'>        <span class="vi">@svg.svg = </span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">@el</span><span class="p">).</span><span class="nx">apppend</span><span class="p">(</span><span class="s">&quot;svg&quot;</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span><span class="nx">@options</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span><span class="nx">@options</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">classed</span><span class="p">(</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="vi">@svg.bars = </span><span class="nx">@svg</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s">&quot;g&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="s">&quot;bars&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="vi">@svg.axis = </span><span class="nx">@svg</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s">&quot;g&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="s">&quot;axis&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="vi">@d3 = </span><span class="p">{}</span>
+</span><span class='line'>        <span class="vi">@d3.hist = </span> <span class="nx">d3</span><span class="p">.</span><span class="nx">layout</span><span class="p">.</span><span class="nx">histogram</span><span class="p">()</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="nx">@options</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">render: </span><span class="nf">()-&gt;</span>
+</span><span class='line'>        <span class="nv">bins = </span><span class="nx">@d3</span><span class="p">.</span><span class="nx">hist</span><span class="p">(</span><span class="nx">@collection</span><span class="p">)</span>
+</span><span class='line'>        <span class="c1">#Make all of this actually work</span>
+</span><span class='line'>        <span class="vi">@d3.x = </span><span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">().</span><span class="nx">range</span>
+</span><span class='line'>        <span class="nx">@svg</span><span class="p">.</span><span class="nx">bars</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s">&quot;rect&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="nx">bins</span><span class="p">).</span><span class="nx">enter</span><span class="p">()</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s">&quot;rect&quot;</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">scale</span>
+</span><span class='line'>        <span class="c1">#If I wasn&#39;t lazy, code for the axis would be here</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">remove: </span><span class="nf">()-&gt;</span>
+</span><span class='line'>        <span class="nx">@svg</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">remove</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">BooksHistogram = </span><span class="nx">Histogram</span>
+</span><span class='line'>    <span class="nv">collection: </span><span class="nx">Books</span>
+</span><span class='line'>    <span class="nv">element: </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s">&quot;</span><span class="err">#</span><span class="s">booksHistogram&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="nv">value: </span><span class="nf">(d)-&gt;</span> <span class="nx">d</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s">&quot;pages&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="nv">height: </span><span class="mi">200</span>
+</span><span class='line'>    <span class="nv">width: </span><span class="mi">200</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>And bam! You have a histogram of the books! That updates dynamically
@@ -413,21 +488,37 @@ together.</p>
 
   <footer>
     <p class="meta">
+      <div>
+
+<a href="https://twitter.com/zackmaril">
+  <img src="http://www.gravatar.com/avatar/fcd59db6d86365a6fba1ce0f9c7b8102.png?s=142"
+       height="142" width="142" /></a>
+<p>
+  I'm a mathematician at large at 
+  <a href="http://gameclosure.com">Game Closure</a>. 
+  <a href="https://twitter.com/zackmaril">Follow me on Twitter</a>; 
+  it's like this blog modulo 140. It'll help you
+  maintain a balanced distribution of cats, brain food, and
+  outrage. All of these thoughts are my own and do not reflect those of
+  my friends, family, or employers. 
+</p>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="ZackMaril">Tweet</a>
+<a href="http://twitter.com/zackmaril" class="twitter-follow-button" data-show-count="false">Follow @zackmaril</a>
+<script src="http://platform.twitter.com/widgets.js"
+        type="text/javascript"></script>
+</div>
+
       
+
+
+
+
+
+
+
+
   
 
-<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
 
 
 <time datetime="2012-07-10T23:31:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
@@ -459,6 +550,19 @@ together.</p>
 <aside class="sidebar">
   
     <section>
+  <h1> <a href="/">Omphaloskepsis.</a></h1>
+  <p>
+    Zack likes math, salsa dancing, rock climbing, and
+    you. <a href="/about.html">More info</a>.
+    <section class="meta">
+      <a href="https://github.com/zmaril"><img src="/images/github.png"/></a>
+      <a href="https://twitter.com/zackmaril"><img src="/images/twitter.png"></a>
+      <a href="/atom.xml"><img src="/images/rss.png" /></a>
+    </section>
+  </p>
+
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -489,7 +593,7 @@ together.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Zack Maril -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

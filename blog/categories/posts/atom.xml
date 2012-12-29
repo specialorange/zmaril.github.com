@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: posts | My Octopress Blog]]></title>
+  <title><![CDATA[Category: posts | Until the thought is gone]]></title>
   <link href="http://zmaril.github.com/blog/categories/posts/atom.xml" rel="self"/>
   <link href="http://zmaril.github.com/"/>
-  <updated>2012-12-28T02:48:33-05:00</updated>
+  <updated>2012-12-28T21:29:34-05:00</updated>
   <id>http://zmaril.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zack Maril]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -61,7 +61,7 @@ Facebook becomes CEO.</li>
 way to make way more money than advertising will allow them to in the
 next few years. And so, with that assumption, let's put our
 entrepreneur hats on and think: <strong>What can Facebook do to make money
-besides ads?</strong> This exercise by itself is a fun challenge in trying to
+besides selling ads?</strong> This exercise by itself is a fun challenge in trying to
 figure out what resources Facebook has at its disposal. Maybe try
 taking a few minutes and see what you can think up.</p>
 
@@ -69,7 +69,7 @@ taking a few minutes and see what you can think up.</p>
 all that talent they've gathered from Stanford and other nerd farms to
 mine all the data that they've accumulated. <strong>For the typical user,
 they probably have a few years worth of status updates, wall posts,
-messages, facebook relationships between members, events attended,
+messages, Facebook relationships between members, events attended,
 likes, location data based off of geo-tagged status updates and
 reverse IP addresses, history of web sites visited
 (<a href="http://www.businessinsider.com/this-is-how-facebook-is-tracking-your-internet-activity-2012-9?op=1">collected from like counters on pages</a>)
@@ -77,8 +77,16 @@ and countless tagged photos</strong>. There is probably more that they know,
 but all this should be enough to get us started down the path of
 understanding why Facebook knows more about you than you ever will.</p>
 
-<p>You there! Yes, you! Step right up and play <strong>"What could Facebook
-possibly know about a user?"</strong></p>
+<p>First though, I freely admit that I'm not a machine learning or social
+network expert. I know a little bit from what I've read online and a
+few books I've picked up, but I would have to spend a fair amount of
+time brushing up before I felt comfortable implementing even naive
+methods. However, unless noted otherwise, I think everything I list
+here is well within the capability of the
+<a href="http://www.technologyreview.com/featuredstory/428150/what-facebook-knows/">talented team at Facebook</a>.</p>
+
+<p>So, without further ado: You there! Yes, you! Step right up and play
+<strong>"What could Facebook possibly know about a user?"</strong></p>
 
 <p><div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook has figured out how to measure and monitor womens' Menstrual cycle based solely on their status updates.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284115670814314496" data-datetime="2012-12-27T01:57:09+00:00">December 27, 2012</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div></p>
@@ -130,8 +138,8 @@ the more likely a user might have a problem. <strong>Take the number of
 occurances of certain words and the number of red cups, run it through
 one of
 <a href="http://en.wikipedia.org/wiki/Category:Classification_algorithms">the dozens of classification algorithms</a>
-<a href="http://en.wikipedia.org/wiki/Training_set">with a training set</a>, and you have a system that can
-predict the chance that a user has alcoholism based on their profile</strong>.</p>
+<a href="http://en.wikipedia.org/wiki/Training_set">with a decent training set</a>, and you have a system that can
+predict the whether a user has alcoholism based on their profile</strong>.</p>
 
 <p><div class='embed tweet'><blockquote class="twitter-tweet"><p>$100 says that Facebook knows approximately how many sexual partners you've had and tailors their ads based on that number.</p>&mdash; Zack Maril (@ZackMaril) <a href="https://twitter.com/ZackMaril/status/284117064799617024" data-datetime="2012-12-27T02:02:41+00:00">December 27, 2012</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div></p>
@@ -212,7 +220,15 @@ soon as companies figure out they can use this information to their
 advantage, they will throw as many resources at it as they can. I can
 imagine far more negative consequences of greater magnitude of this
 knowledge difference than I can of positive consequences. Bluntly, <strong>I
-think you are fucked if you have a Facebook account</strong>.</p>
+think you are screwed if you have a Facebook account</strong>. Which,
+incidentally, is why I don't have an account.</p>
+
+<p>I really hope I am wrong though. It would be nice to say this is just
+some eggnog induced paranoia and that the folks at Facebook would
+never do something like this. I have friends and family who all use
+Facebook and I fear that they will get very hurt because of it and not
+understand why. I wish I could have a Facebook account without
+worrying that it will come back to haunt me.</p>
 
 <hr />
 
@@ -221,9 +237,8 @@ think you are fucked if you have a Facebook account</strong>.</p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div></p>
 
 <p>If this were implemented at Facebook, whoever did it will probably
-take that secret to her gold-lined grave. Facebook would probably have him
-killed if she tried to talk. (I'm only half joking about Zuck having
-someone killed).</p>
+take that secret to her gold-lined grave. Facebook would probably have her
+killed if she tried to talk (half joking here).</p>
 
 <hr />
 
