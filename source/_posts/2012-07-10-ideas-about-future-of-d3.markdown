@@ -173,7 +173,7 @@ selectedCountries and what not.
 
 Here's what I wish I could have written (in coffeescript):
 
-{% highlight coffeescript %}
+``` coffeescript
 CompareState = Backbone.Model
     countries: ["India","Denial","`Murica"]
     log: true
@@ -236,7 +236,7 @@ Eidetic.Router.extend
         watchView.update()
     bubble: ()-> #You know what is up by now.
         bubbleView.update()
-{% endhighlight %}
+```
 
 What would ideally happen is that the
 [Eidetic](http://en.wikipedia.org/wiki/Eidetic_memory) router would
@@ -275,7 +275,7 @@ Now that we have gotten into the spirit of thinking with backbone,
 let's start thinking about collections and reusable charts. Here's an
 example of what I mean:
 
-{% highlight coffeescript %}
+``` coffeescript
 Book = Backbone.Model
 
 Books = Backbone.Collection.extend
@@ -316,7 +316,7 @@ BooksHistogram = Histogram
     value: (d)-> d.get("pages")
     height: 200
     width: 200
-{% endhighlight %}
+```
 
 And bam! You have a histogram of the books! That updates dynamically
 as your backbone data does! And the implementation is reusable for other

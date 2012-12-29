@@ -3,11 +3,16 @@ layout: default
 ---
 
 <div class="blog-index">
+  <article>
+      <header>
+        <h1><a href="/">Omphaloskepsis.</a></h1>
+      </header>
+  </article>
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}
     <article>
-      {% include article.html %}
+      <a href="{{post.url}}">{{post.title}}</a>
     </article>
   {% endfor %}
   <div class="pagination">

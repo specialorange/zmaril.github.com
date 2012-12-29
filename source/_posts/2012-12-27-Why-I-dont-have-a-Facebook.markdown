@@ -51,7 +51,7 @@ In my mind, there is a nonzero chance of Facebook needing to find a
 way to make way more money than advertising will allow them to in the
 next few years. And so, with that assumption, let's put our
 entrepreneur hats on and think: **What can Facebook do to make money
-besides ads?** This exercise by itself is a fun challenge in trying to
+besides selling ads?** This exercise by itself is a fun challenge in trying to
 figure out what resources Facebook has at its disposal. Maybe try
 taking a few minutes and see what you can think up.
  
@@ -59,7 +59,7 @@ The most realistic option that I see happening is that Facebook takes
 all that talent they've gathered from Stanford and other nerd farms to
 mine all the data that they've accumulated. **For the typical user,
 they probably have a few years worth of status updates, wall posts,
-messages, facebook relationships between members, events attended,
+messages, Facebook relationships between members, events attended,
 likes, location data based off of geo-tagged status updates and
 reverse IP addresses, history of web sites visited
 ([collected from like counters on pages](http://www.businessinsider.com/this-is-how-facebook-is-tracking-your-internet-activity-2012-9?op=1))
@@ -67,8 +67,16 @@ and countless tagged photos**. There is probably more that they know,
 but all this should be enough to get us started down the path of
 understanding why Facebook knows more about you than you ever will.
 
-You there! Yes, you! Step right up and play **"What could Facebook
-possibly know about a user?"**
+First though, I freely admit that I'm not a machine learning or social
+network expert. I know a little bit from what I've read online and a
+few books I've picked up, but I would have to spend a fair amount of
+time brushing up before I felt comfortable implementing even naive
+methods. However, unless noted otherwise, I think everything I list
+here is well within the capability of the
+[talented team at Facebook](http://www.technologyreview.com/featuredstory/428150/what-facebook-knows/).
+
+So, without further ado: You there! Yes, you! Step right up and play
+**"What could Facebook possibly know about a user?"**
 
 {% tweet https://twitter.com/ZackMaril/status/284115670814314496 %}
 
@@ -118,8 +126,8 @@ the more likely a user might have a problem. **Take the number of
 occurances of certain words and the number of red cups, run it through
 one of
 [the dozens of classification algorithms](http://en.wikipedia.org/wiki/Category:Classification_algorithms)
-[with a training set](http://en.wikipedia.org/wiki/Training_set), and you have a system that can
-predict the chance that a user has alcoholism based on their profile**.
+[with a decent training set](http://en.wikipedia.org/wiki/Training_set), and you have a system that can
+predict the whether a user has alcoholism based on their profile**.
 
 {% tweet https://twitter.com/ZackMaril/status/284117064799617024 %}
 
@@ -193,7 +201,15 @@ soon as companies figure out they can use this information to their
 advantage, they will throw as many resources at it as they can. I can
 imagine far more negative consequences of greater magnitude of this
 knowledge difference than I can of positive consequences. Bluntly, **I
-think you are fucked if you have a Facebook account**.
+think you are screwed if you have a Facebook account**. Which,
+incidentally, is why I don't have an account.
+
+I really hope I am wrong though. It would be nice to say this is just
+some eggnog induced paranoia and that the folks at Facebook would
+never do something like this. I have friends and family who all use
+Facebook and I fear that they will get very hurt because of it and not
+understand why. I wish I could have a Facebook account without
+worrying that it will come back to haunt me. 
 
 ------------
 
@@ -201,9 +217,8 @@ think you are fucked if you have a Facebook account**.
 {% tweet https://twitter.com/ZackMaril/status/284121414401933312 %} 
 
 If this were implemented at Facebook, whoever did it will probably
-take that secret to her gold-lined grave. Facebook would probably have him
-killed if she tried to talk. (I'm only half joking about Zuck having
-someone killed).
+take that secret to her gold-lined grave. Facebook would probably have her
+killed if she tried to talk (half joking here). 
 
 ------------
 
