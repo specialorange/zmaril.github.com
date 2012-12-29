@@ -211,6 +211,8 @@ Facebook and I fear that they will get very hurt because of it and not
 understand why. I wish I could have a Facebook account without
 worrying that it will come back to haunt me. 
 
+(For comments on this, use the [Hacker News thread](discussion))
+
 ------------
 
 ** Bonus ** 
