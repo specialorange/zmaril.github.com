@@ -316,7 +316,7 @@ BooksHistogram = Histogram
     value: (d)-> d.get("pages")
     height: 200
     width: 200
-```
+```    
 
 And bam! You have a histogram of the books! That updates dynamically
 as your backbone data does! And the implementation is reusable for other
