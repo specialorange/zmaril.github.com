@@ -4,7 +4,7 @@
   <title><![CDATA[Until the thought is gone]]></title>
   <link href="http://zmaril.github.com/atom.xml" rel="self"/>
   <link href="http://zmaril.github.com/"/>
-  <updated>2013-01-15T14:59:33-05:00</updated>
+  <updated>2013-03-05T13:02:43+04:00</updated>
   <id>http://zmaril.github.com/</id>
   <author>
     <name><![CDATA[Zack Maril]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[How I went about introducing High Schoolers to C]]></title>
     <link href="http://zmaril.github.com/blog/2013/01/14/how-i-went-about-introducing-high-schoolers-to-c/"/>
-    <updated>2013-01-14T00:24:00-05:00</updated>
+    <updated>2013-01-14T00:24:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2013/01/14/how-i-went-about-introducing-high-schoolers-to-c</id>
     <content type="html"><![CDATA[<p>Thanks to a good deal of luck, I attended the
 <a href="https://www3.imsa.edu/">Illinois Mathematics and Science Academy</a>.
@@ -215,7 +215,7 @@ programming and computer science.</p>
   <entry>
     <title type="html"><![CDATA[Why I don't have a Facebook account]]></title>
     <link href="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/"/>
-    <updated>2012-12-27T00:00:00-05:00</updated>
+    <updated>2012-12-27T00:00:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook</id>
     <content type="html"><![CDATA[<p>In the past past three years, I&#8217;ve lived in Chicago (IL), College
 Station (TX), Urbana (IL), Cincinnati (OH), and Mountain View (CA).
@@ -483,7 +483,7 @@ everything about you; all you can do is help them make mistakes.</p>
   <entry>
     <title type="html"><![CDATA[Left]]></title>
     <link href="http://zmaril.github.com/blog/2012/12/12/left/"/>
-    <updated>2012-12-12T00:00:00-05:00</updated>
+    <updated>2012-12-12T00:00:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2012/12/12/left</id>
     <content type="html"><![CDATA[<p>Left is a clean, whitespace-happy layout for <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
 
@@ -495,7 +495,7 @@ everything about you; all you can do is help them make mistakes.</p>
   <entry>
     <title type="html"><![CDATA[Ideas about the future of d3 and related technologies]]></title>
     <link href="http://zmaril.github.com/blog/2012/07/10/ideas-about-future-of-d3/"/>
-    <updated>2012-07-10T23:31:00-04:00</updated>
+    <updated>2012-07-10T23:31:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2012/07/10/ideas-about-future-of-d3</id>
     <content type="html"><![CDATA[<p>Lately, I&#8217;ve been working with <a href="http://d3js.org/">d3.js</a> a good deal. I&#8217;ve created
 several <a href="https://github.com/zmaril/d3.js-boilerplate">open source</a> <a href="https://github.com/zmaril/d3-bootstrap-plugins">d3.js projects</a>,

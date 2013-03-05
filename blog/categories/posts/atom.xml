@@ -4,7 +4,7 @@
   <title><![CDATA[Category: posts | Until the thought is gone]]></title>
   <link href="http://zmaril.github.com/blog/categories/posts/atom.xml" rel="self"/>
   <link href="http://zmaril.github.com/"/>
-  <updated>2013-01-15T14:59:33-05:00</updated>
+  <updated>2013-03-05T13:02:43+04:00</updated>
   <id>http://zmaril.github.com/</id>
   <author>
     <name><![CDATA[Zack Maril]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Why I don't have a Facebook account]]></title>
     <link href="http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook/"/>
-    <updated>2012-12-27T00:00:00-05:00</updated>
+    <updated>2012-12-27T00:00:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2012/12/27/Why-I-dont-have-a-Facebook</id>
     <content type="html"><![CDATA[<p>In the past past three years, I've lived in Chicago (IL), College
 Station (TX), Urbana (IL), Cincinnati (OH), and Mountain View (CA).
@@ -273,7 +273,7 @@ everything about you; all you can do is help them make mistakes.</p>
   <entry>
     <title type="html"><![CDATA[Left]]></title>
     <link href="http://zmaril.github.com/blog/2012/12/12/left/"/>
-    <updated>2012-12-12T00:00:00-05:00</updated>
+    <updated>2012-12-12T00:00:00+04:00</updated>
     <id>http://zmaril.github.com/blog/2012/12/12/left</id>
     <content type="html"><![CDATA[<p>Left is a clean, whitespace-happy layout for <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
 
